@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>ECO-PO - PRODUCTOS</title>
+    <link rel="shorcut icon" href="img/ico.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dietas.html">Dietas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="salud-y-buenos-habitos.html">Salud y buenos habitos</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="nav-link px-2" href="login.html"><i class="fa-solid fa-user"></i> Iniciar sesión / Registrarse</a>
+                    <a class="nav-link text-orange px-2" href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> S/. 0.00</a>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <div id="productos" class="container-fluid px-5" style="padding-top: 65px;">
+        <div class="row pt-5 pb-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="fw-bolder">Filtros</h4>
+                        <h6 class="ps-3 fw-semibold pt-3">Categorias <i class="fa-solid fa-sort-down ps-5"></i></h6>
+                        <ul class="list-group lista">
+                            <li class="list-group-item">
+                                <input type="checkbox" id="producto1" checked>
+                                <label class="card-text-up" for="producto1">Bebidas</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="producto2">
+                                <label class="card-text-up" for="producto2">Congelados y Refigerados</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="producto3" checked>
+                                <label class="card-text-up" for="producto3">Lácteos y Derivados</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="producto4" checked>
+                                <label class="card-text-up" for="producto4">Veganos</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="producto5">
+                                <label class="card-text-up" for="producto5">Quesos y Embutidos</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="producto6">
+                                <label class="card-text-up" for="producto6">Quesos y Embutidos</label>
+                            </li>
+                        </ul>
+                        <div class="line"></div>
+                        <h6 class="ps-3 fw-semibold pt-3">Subcategorias <i class="fa-solid fa-sort-down ps-5"></i></h6>
+                        <ul class="list-group lista">
+                            <li class="list-group-item">
+                                <input type="checkbox" id="subproducto1">
+                                <label class="card-text-up" for="subproducto1">Precio</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="subproducto2" checked>
+                                <label class="card-text-up" for="subproducto2">Más vendidos</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="subproducto3">
+                                <label class="card-text-up" for="subproducto3">Más populares</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="subproducto4" checked>
+                                <label class="card-text-up" for="subproducto4">Mejores productos</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="subproducto5">
+                                <label class="card-text-up" for="subproducto5">Dieta</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" id="subproducto6">
+                                <label class="card-text-up" for="subproducto6">Comida saludable</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 text-start">512 productos disponibles</div>
+                            <div class="col-md-8 text-end">
+                                <div class="row">
+                                    <label class="col-md-4 fw-semibold pt-2">Ordenar por: </label>
+                                    <div class="col-md-8">
+                                        <select class="form-select">
+                                            <option >Seleccionar</option>
+                                            <option value="precio" selected>Precio</option>
+                                            <option value="categoria">Categoria</option>
+                                            <option value="stock">Stock</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-1.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-2.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-3.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-4.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-5.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-6.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-1.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-2.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-3.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-4.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-5.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card rounded-4 h-100 py-4">
+                            <div class="w-100 text-center">
+                                <img src="img/prod-6.png" class="card-img-top img-prod" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <h6 class="card-title fw-bolder">ALYSSOL NÉCTAR DE AGUAYMANTO 300ML</h6>
+                                <p class="card-text">ALYSSOL</p>
+                                <p class="card-text"><small class="text-body-secondary">S/. 7.90</small></p>
+                                <button type="button" class="btn btn-warning btn-sm js-addproduct">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="bg-footer py-3">
+
+        <div class="container">
+
+            <div class="row justify-content-md-center align-items-center">
+
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">Derechos de Autor © 2023 | ECO-PO</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.js-addproduct').click(function () {
+                Swal.fire({
+                    title: "Exito",
+                    text: "Producto agregado",
+                    icon: "success"
+                });
+            })
+        })
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
